@@ -30,7 +30,7 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const ID = params.get('id') || 'РЕЗЕРВНЫЙ_ID';
-    const TITLE = params.get('title') || 'Плейлист'; 
+    const TITLE = params.get('title') || 'Очередь песен'; 
     const SHEET = 'Лист1'; // имя вкладки
     const BASE = `https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:json&sheet=${SHEET}&range=A:A&_=`;
 
