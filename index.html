@@ -30,9 +30,12 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const ID = params.get('id') || 'РЕЗЕРВНЫЙ_ID';
+    const TITLE = params.get('title') || 'Плейлист'; 
     const SHEET = 'Лист1'; // имя вкладки
     const BASE = `https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:json&sheet=${SHEET}&range=A:A&_=`;
 
+    document.querySelector('h1').textContent = TITLE;
+    
     async function load() {
       try {
         const res = await fetch(BASE + Date.now());
